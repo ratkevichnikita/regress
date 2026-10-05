@@ -275,3 +275,22 @@ table.bs .tag{display:block;font-size:12px;margin-bottom:3px}
 }
 .nav .nt{font-family:Literata,"PT Serif",Georgia,serif;font-size:21px;font-weight:600;line-height:1.25}
 .nav .nd{font-size:15px;color:var(--muted);margin-top:5px;max-width:62ch}
+
+/* ---------- длинные посты для телеграма ---------- */
+.post{
+  background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:2px;padding:28px 32px;margin:0 0 26px;box-shadow:var(--shadow);
+}
+@media (max-width:620px){.post{padding:20px 22px}}
+.post .cap{
+  font-size:11.5px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--faint);margin:0 0 14px;
+}
+.post h4{
+  font-family:Literata,"PT Serif",Georgia,serif;font-size:21px;font-weight:600;
+  line-height:1.3;margin:0 0 18px;color:var(--accent-ink);max-width:40ch;
+}
+.post p{margin:0 0 14px;font-size:16px;line-height:1.62;max-width:64ch}
+.post p:last-child{margin-bottom:0}
+.post .sep{border:0;border-top:1px solid var(--line);margin:20px 0;max-width:64ch}
+.post .meta{font-size:12.5px;color:var(--faint);margin-top:18px;font-variant-numeric:tabular-nums}
