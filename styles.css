@@ -294,3 +294,37 @@ table.bs .tag{display:block;font-size:12px;margin-bottom:3px}
 .post p:last-child{margin-bottom:0}
 .post .sep{border:0;border-top:1px solid var(--line);margin:20px 0;max-width:64ch}
 .post .meta{font-size:12.5px;color:var(--faint);margin-top:18px;font-variant-numeric:tabular-nums}
+
+/* ---------- общая навигация ---------- */
+.topnav{position:relative;margin:0 0 20px;z-index:60}
+.topnav > summary{
+  list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;
+  border:1px solid var(--line-strong);border-radius:2px;background:var(--surface);
+  padding:8px 14px;font-size:12.5px;font-weight:600;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--muted);
+}
+.topnav > summary::-webkit-details-marker{display:none}
+.topnav > summary::after{
+  content:"";width:6px;height:6px;border-right:1.5px solid var(--accent);
+  border-bottom:1.5px solid var(--accent);transform:rotate(45deg) translateY(-2px);
+  transition:transform .16s ease;
+}
+.topnav[open] > summary::after{transform:rotate(-135deg) translateY(-2px)}
+.topnav > summary:hover{color:var(--ink);border-color:var(--accent)}
+.topnav .menu{
+  position:absolute;top:calc(100% + 6px);left:0;min-width:320px;max-width:min(92vw,420px);
+  background:var(--surface);border:1px solid var(--line-strong);border-radius:3px;
+  box-shadow:0 4px 28px -8px rgba(0,0,0,.28);padding:14px 0;
+}
+.topnav .grp{
+  font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--faint);padding:10px 20px 6px;
+}
+.topnav .grp:first-child{padding-top:0}
+.topnav a{
+  display:block;padding:7px 20px;text-decoration:none;color:var(--ink);font-size:15px;
+}
+.topnav a:hover{background:var(--accent-soft);color:var(--accent-ink)}
+.topnav a[aria-current]{color:var(--accent-ink);font-weight:600}
+.topnav a[aria-current]::before{content:"— ";color:var(--accent)}
+.nav .grp{font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
