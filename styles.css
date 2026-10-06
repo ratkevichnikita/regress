@@ -342,3 +342,5 @@ table.bs .tag{display:block;font-size:12px;margin-bottom:3px}
 .story .tx{font-family:Literata,"PT Serif",Georgia,serif;font-size:17px;line-height:1.4;max-width:46ch}
 .story .tx mark{background:transparent;color:var(--accent-ink);font-weight:700}
 .story .wy{font-size:13px;color:var(--muted);margin-top:5px;max-width:52ch}
+.story .sub{font-size:15px;line-height:1.55;color:var(--muted);margin-top:7px;max-width:50ch}
+.story .sub mark{background:transparent;color:var(--accent-ink);font-weight:600}
