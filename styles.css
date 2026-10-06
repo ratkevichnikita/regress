@@ -354,10 +354,10 @@ body{overflow-wrap:break-word}
   .mast{padding:34px 0 26px}
 
   /* сторис: номер и бейдж в строку, текст под ними на всю ширину */
-  .story{grid-template-columns:auto 1fr;gap:10px 10px;padding:18px 0}
-  .story .sn{grid-area:1 / 1 / 2 / 2;padding-top:3px}
-  .story .bg{grid-area:1 / 2 / 2 / 3;justify-self:start}
-  .story > div:last-child{grid-area:2 / 1 / 3 / 3;min-width:0}
+  .story{grid-template-columns:100%;gap:8px;padding:18px 0}
+  .story .sn{justify-self:start}
+  .story .bg{justify-self:start}
+  .story > div:last-child{min-width:0}
   .story .tx{font-size:16.5px;max-width:none}
   .story .sub{font-size:15px;margin-top:6px;max-width:none}
 
