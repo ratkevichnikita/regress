@@ -328,3 +328,17 @@ table.bs .tag{display:block;font-size:12px;margin-bottom:3px}
 .topnav a[aria-current]{color:var(--accent-ink);font-weight:600}
 .topnav a[aria-current]::before{content:"— ";color:var(--accent)}
 .nav .grp{font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+
+/* ---------- сторителлинги ---------- */
+.story{display:grid;grid-template-columns:34px 92px minmax(0,1fr);gap:16px;
+  padding:14px 0;border-bottom:1px solid var(--line);align-items:start}
+.story:last-child{border-bottom:none}
+@media (max-width:640px){.story{grid-template-columns:30px minmax(0,1fr)}.story .bg{grid-column:2}}
+.story .sn{font-family:Literata,"PT Serif",Georgia,serif;font-weight:700;font-size:13px;
+  color:var(--faint);font-variant-numeric:tabular-nums;padding-top:3px}
+.story .bg{font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent-ink);background:var(--accent-soft);padding:4px 8px;border-radius:2px;
+  text-align:center;white-space:nowrap}
+.story .tx{font-family:Literata,"PT Serif",Georgia,serif;font-size:17px;line-height:1.4;max-width:46ch}
+.story .tx mark{background:transparent;color:var(--accent-ink);font-weight:700}
+.story .wy{font-size:13px;color:var(--muted);margin-top:5px;max-width:52ch}
