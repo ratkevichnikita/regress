@@ -344,3 +344,60 @@ table.bs .tag{display:block;font-size:12px;margin-bottom:3px}
 .story .wy{font-size:13px;color:var(--muted);margin-top:5px;max-width:52ch}
 .story .sub{font-size:15px;line-height:1.55;color:var(--muted);margin-top:7px;max-width:50ch}
 .story .sub mark{background:transparent;color:var(--accent-ink);font-weight:600}
+
+/* ======================================================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+   ====================================================================== */
+body{overflow-wrap:break-word}
+
+@media (max-width:680px){
+  .wrap{padding:0 18px 80px}
+  .mast{padding:34px 0 26px}
+
+  /* сторис: номер и бейдж в строку, текст под ними на всю ширину */
+  .story{grid-template-columns:auto auto 1fr;gap:9px 10px;padding:18px 0}
+  .story .sn{grid-row:1;grid-column:1;padding-top:4px}
+  .story .bg{grid-row:1;grid-column:2;justify-self:start}
+  .story > div:last-child{grid-row:2;grid-column:1 / -1}
+  .story .tx{font-size:16.5px}
+  .story .sub{font-size:15px;margin-top:6px}
+
+  /* обычные таблицы переносят текст вместо горизонтального скролла */
+  table{min-width:0;font-size:14.5px}
+  th,td{padding:11px 10px 11px 0}
+  th:last-child,td:last-child{padding-right:0}
+  td.tag,th:first-child{width:auto}
+
+  /* широкая таблица «было — стало — желание» раскладывается карточками */
+  table.bs{min-width:0}
+  table.bs thead{display:none}
+  table.bs tbody,table.bs tr,table.bs td{display:block;width:auto}
+  table.bs tr{padding:14px 0;border-bottom:1px solid var(--line-strong)}
+  table.bs tr:last-child{border-bottom:none}
+  table.bs td{border:0;padding:3px 0;font-size:15px}
+  table.bs td:nth-child(2){color:var(--muted)}
+  table.bs td:nth-child(2)::before{content:"→ "}
+  table.bs td:nth-child(3)::before{content:"хочу: ";color:var(--faint);font-family:"Golos Text",sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+
+  /* выпадающее меню по ширине экрана */
+  .topnav .menu{min-width:0;width:100%;max-width:none}
+
+  /* варианты со счётчиком — в столбик */
+  .opt{grid-template-columns:minmax(0,1fr);gap:4px}
+  .opt .n{justify-self:start}
+
+  /* карточка профиля и длинные посты — компактнее */
+  .profile{padding:20px 20px;max-width:none}
+  .nav a{grid-template-columns:30px minmax(0,1fr);gap:12px;padding:16px 0}
+  .nav .nt{font-size:18px}
+
+  h2.bt{font-size:21px}
+  .node > summary .t{font-size:15px}
+  blockquote.q,.ask,.para,.leaf .v{font-size:15.5px}
+}
+
+@media (max-width:400px){
+  .wrap{padding:0 14px 70px}
+  .story .bg{font-size:9.5px;padding:3px 6px}
+  .kids{padding-left:12px}
+}
