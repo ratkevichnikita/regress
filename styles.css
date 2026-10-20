@@ -420,3 +420,16 @@ body{overflow-wrap:break-word}
 .topnav .sub > summary{padding-left:25px;color:var(--muted);letter-spacing:.1em}
 .topnav .sub > a{padding-left:42px}
 .topnav .has-current > summary{color:var(--accent-ink)}
+
+.args{margin:4px 0 0;padding-left:22px;max-width:70ch}
+.args li{margin:0 0 7px;line-height:1.55;font-size:15px}
+.args li::marker{color:var(--faint);font-variant-numeric:tabular-nums}
+.args li:last-child{margin-bottom:0}
+.note{margin:0 0 14px;padding:11px 14px;border-left:2px solid var(--line-strong);background:var(--accent-soft);font-size:14.5px;line-height:1.55;color:var(--muted);max-width:70ch}
+.dayrow{display:grid;grid-template-columns:38px minmax(0,1fr);gap:14px;padding:13px 0;border-bottom:1px solid var(--line)}
+.dayrow:last-child{border-bottom:none}
+.dayrow .dn{font-size:12.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);padding-top:3px}
+.dayrow .dt{font-family:Literata,"PT Serif",Georgia,serif;font-size:17px;font-weight:600;line-height:1.35}
+.dayrow .dd{font-size:15px;color:var(--muted);margin-top:4px;line-height:1.55;max-width:66ch}
+.dayrow .dg{font-size:14px;margin-top:6px;max-width:66ch}
+@media (max-width:680px){.dayrow{grid-template-columns:100%;gap:4px}}
