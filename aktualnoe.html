@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Golos+Text:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 <div class="wrap wide">
@@ -15,21 +15,31 @@
     <details class="topnav">
       <summary>Навигация</summary>
       <div class="menu">
-        <p class="grp">Общее</p>
         <a href="index.html">Все материалы</a>
-        <p class="grp">Тело и тревога</p>
-        <a href="segmentation.html">Сегментация ЦА</a>
-        <a href="segment.html">Боли и желания</a>
-        <a href="pravila.html">Правила отбора</a>
-        <a href="instagram.html">Шапка профиля</a>
-        <a href="reels.html">Темы для рилсов</a>
-        <a href="telegram.html">Телеграм-канал</a>
-        <p class="grp">Отношения</p>
-        <a href="segment-otnosheniya.html">Сегментация</a>
-        <a href="otnosheniya.html">Карта и контент</a>
-        <a href="reels-otnosheniya.html">Рилсы</a>
-        <a href="posts-otnosheniya.html">Посты для Телеграма</a>
-        <a href="aktualnoe.html" aria-current="page">Актуальное</a>
+        <details class="grpd has-current" open>
+          <summary>Регресс · Анна</summary>
+          <a href="pravila.html">Правила отбора</a>
+          <details class="grpd sub has-current" open>
+            <summary>Отношения · текущее</summary>
+            <a href="segment-otnosheniya.html">Сегментация</a>
+            <a href="otnosheniya.html">Карта и контент</a>
+            <a href="reels-otnosheniya.html">Рилсы</a>
+            <a href="posts-otnosheniya.html">Посты для Телеграма</a>
+            <a href="aktualnoe.html" aria-current="page">Актуальное</a>
+          </details>
+          <details class="grpd sub">
+            <summary>Тело и тревога · старое</summary>
+            <a href="segmentation.html">Сегментация ЦА</a>
+            <a href="segment.html">Боли и желания</a>
+            <a href="instagram.html">Шапка профиля</a>
+            <a href="reels.html">Темы для рилсов</a>
+            <a href="telegram.html">Телеграм-канал</a>
+          </details>
+        </details>
+        <details class="grpd">
+          <summary>Косметология · Дананг</summary>
+          <a href="telegram-kosmetolog.html">Телеграм-канал</a>
+        </details>
       </div>
     </details>
     <p class="eyebrow">Instagram · закреплённые сторис</p>

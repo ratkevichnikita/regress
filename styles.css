@@ -407,3 +407,16 @@ body{overflow-wrap:break-word}
 .ver.new{border-left:2px solid var(--accent);padding-left:13px;margin-top:12px}
 .ver.new .lab{color:var(--accent)}
 @media (max-width:680px){.ver.new{padding-left:10px}}
+
+.topnav .grpd{border-top:1px solid var(--line);margin-top:5px;padding-top:5px}
+.topnav .grpd:first-of-type{border-top:none;margin-top:0}
+.topnav .grpd > summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:5px;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.topnav .grpd > summary::-webkit-details-marker{display:none}
+.topnav .grpd > summary::before{content:"";flex:none;width:5px;height:5px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(-45deg);transition:transform .15s}
+.topnav .grpd[open] > summary::before{transform:rotate(45deg)}
+.topnav .grpd > summary:hover{color:var(--accent-ink);background:var(--accent-soft)}
+.topnav .grpd > a{padding-left:25px}
+.topnav .sub{border-top:none;margin-top:0;padding-top:0}
+.topnav .sub > summary{padding-left:25px;color:var(--muted);letter-spacing:.1em}
+.topnav .sub > a{padding-left:42px}
+.topnav .has-current > summary{color:var(--accent-ink)}
