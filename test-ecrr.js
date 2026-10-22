@@ -41,6 +41,8 @@ const ORDER = (() => { const a=[],b=[],o=[];
   ITEMS.forEach(i => (i[1]==='anx'?a:b).push(i));
   for (let k=0;k<18;k++){ o.push(a[k]); o.push(b[k]); } return o; })();
 
+const ANCHORS = ['Совершенно не так','Не так','Скорее не так','Трудно сказать','Скорее так','Так','Точно так'];
+
 const KEY='ecrr-state';
 let answers={}, pos=0;
 try { const s=JSON.parse(localStorage.getItem(KEY)||'{}');
@@ -57,10 +59,8 @@ function draw(){
   $('quiz').innerHTML=`<div class="qi" id="qi${n}">
       <p class="qn">Вопрос ${pos+1} из 36</p>
       <p class="qt">${text}</p>
-      <div class="scale"><span class="anc">Совсем не так</span>
-        <div class="dots">${[1,2,3,4,5,6,7].map(v=>
-          `<label class="opt${cur===v?' on':''}"><input type="radio" name="q" value="${v}"${cur===v?' checked':''}><span class="dot">${v}</span></label>`).join('')}</div>
-        <span class="anc r">Именно так</span></div>
+      <div class="scale">${[1,2,3,4,5,6,7].map(v=>
+          `<label class="opt${cur===v?' on':''}"><input type="radio" name="q" value="${v}"${cur===v?' checked':''}><span class="dot">${v}</span><span class="cap">${ANCHORS[v-1]}</span></label>`).join('')}</div>
     </div>`;
   $('bar').style.width=(pos/36*100)+'%';
   $('pcount').textContent=`${pos} из 36`;
