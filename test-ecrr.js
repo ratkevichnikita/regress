@@ -78,7 +78,6 @@ function finish(){
   const s=score();
   const t = s.anx<4 ? (s.avo<4?'sec':'dis') : (s.avo<4?'pre':'fea');
   const [name,desc]=TYPES[t];
-  const tbl=sc=>s.rows[sc].map(r=>`<tr><td>${r.n}</td><td>${r.raw}</td><td>${r.rev?'да':'—'}</td><td>${r.val}</td></tr>`).join('');
   $('quiz').innerHTML=''; $('next').hidden=true;
   $('bar').style.width='100%'; $('pcount').textContent='36 из 36';
   $('res').innerHTML=`
@@ -87,18 +86,7 @@ function finish(){
     <div class="gauge"><div class="gl"><span>Тревожность</span><b>${s.anx.toFixed(2)}</b><i>${band(s.anx)}</i></div>
       <div class="track"><div class="fill" style="width:${(s.anx-1)/6*100}%"></div><div class="mid"></div></div></div>
     <div class="gauge"><div class="gl"><span>Избегание</span><b>${s.avo.toFixed(2)}</b><i>${bandA(s.avo)}</i></div>
-      <div class="track"><div class="fill" style="width:${(s.avo-1)/6*100}%"></div><div class="mid"></div></div></div>
-    <p class="cnt">обе шкалы от 1 до 7 · тип определяется по середине, по четвёрке</p>
-    <p class="para" style="font-size:14.5px;color:var(--muted)">Словесные пометки рядом с числами — только про выраженность: до 3 слабая, от 3 до 5 умеренная, выше 5 сильная. На тип они не влияют, и у границ не стоит читать их буквально: 5,06 и 4,94 отличаются на один балл в одном ответе.</p>
-    <details class="node lvl2"><summary><span class="num">—</span><span class="t">Как это посчитано</span></summary>
-      <div class="kids">
-        <p class="para">Обратные пункты пересчитаны как <strong>8 минус ответ</strong>. По каждой шкале взято среднее из 18 значений.</p>
-        <p class="para"><strong>Тревожность:</strong> сумма ${s.sumA} ÷ 18 = ${s.anx.toFixed(2)}<br>
-        <strong>Избегание:</strong> сумма ${s.sumV} ÷ 18 = ${s.avo.toFixed(2)}</p>
-        <div class="scroll"><table><thead><tr><th>Пункт</th><th>Ответ</th><th>Обратный</th><th>В зачёт</th></tr></thead>
-        <tbody><tr class="hd"><td colspan="4">Тревожность, пункты 1–18</td></tr>${tbl('anx')}
-        <tr class="hd"><td colspan="4">Избегание, пункты 19–36</td></tr>${tbl('avo')}</tbody></table></div>
-      </div></details>`;
+      <div class="track"><div class="fill" style="width:${(s.avo-1)/6*100}%"></div><div class="mid"></div></div></div>`;
   $('res').hidden=false;
 }
 
